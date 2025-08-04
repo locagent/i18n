@@ -1,107 +1,72 @@
 ---
 layout: default
 title: i18n Best Practices
-description: "Organized i18n best practices and i18next-specific guidelines for AI-powered code reviews"
+description: "Organized i18n best practices for AI-powered code reviews"
 ---
 
 # 🌐 Internationalization (i18n) Best Practices
 
-Welcome to the **i18n Best Practices** guide, organized for GitHub Pages. This repository contains two main sections:
-
-- [General i18n Best Practices](#general-i18n-best-practices)
-- [i18next-Specific Best Practices](#i18next-specific-best-practices)
-
----
-
 ## 📋 Table of Contents
 
 1. [General i18n Best Practices](#general-i18n-best-practices)
-2. [i18next-Specific Best Practices](#i18next-specific-best-practices)
-3. [Example AI Prompts for Code Review](#example-ai-prompts-for-code-review)
+2. [Code Review](#code-review)
 
 ---
 
 ## General i18n Best Practices
 
 ### 1. Avoid String Concatenation
-- **Bad:** `"Hello " + userName`
-- **Good:** Use full sentences with placeholders: `t('greeting', { name: userName })`.
+- **Bad:** `"Hello " + userName`.
+- **Good:** Keep sentences intact and use placeholders: `t('greeting', { name: userName })`.
 
 ### 2. Pluralization and Count Handling
-- Provide `_one` and `_other` keys.
-- Pass `count` to `t()` to select the right form.
+- Provide `_one`, `_other` (and language‑specific `_zero`, `_two`, `_few`, `_many`) keys.
+- Pass `count` into your translation call: `t('item', { count })`.
 
-### 3. Locale-Specific Formatting
-- Use Intl formatting via i18next: `{{value, formatName}}`.
-- Rely on locale-aware date, number, and currency formats.
+### 3. Locale‑Specific Formatting
+- Use Intl-based formatting (dates, numbers, currency) via placeholders: `{{ value, date }}`, `{{ value, number }}`.
+- Rely on the user’s locale settings to format correctly (e.g., `31/12/2025` vs. `12/31/2025`).
 
 ### 4. Fallback Languages
-- Set `fallbackLng` to a real language (e.g., `'en'`).
-- Configure `fallbackNS` for shared namespaces.
+- Auto‑detect user locale, but allow manual override via a language switcher.
+- Always configure a real fallback language (e.g., English) so missing keys never display raw identifiers.
 
-### 5. Provide Context
-- Use distinct keys or i18next `context` feature for gender, formality.
+### 5. Right‑to‑Left (RTL) Language Support
+- For proper RTL layout, ensure your CSS applies `direction: rtl;` when the page’s language attribute is one of the following languages: ks, yi, uz, he, fa, sd, lrc, ckb, ar, ur, ug, mzn, ps.
 
-### 6. UI/UX Considerations
-- Auto-detect and allow users to override locale.
-- Design for text expansion and RTL support.
-- Use Unicode fonts and avoid in-string HTML.
+### 6. Placeholder Naming
+- Use consistent, descriptive placeholder names (e.g., `{{userName}}` rather than `{{x}}`).
 
----
+### 7. ICU Message Format
+- Adopt ICU syntax when needing complex logic (select, plurals) in a single string.
 
-## i18next-Specific Best Practices
-
-### 1. Configuration
-```js
-i18next.init({
-  lng: userLang,
-  supportedLngs: ['en', 'es', 'de'],
-  fallbackLng: ['en'],
-  ns: ['common', 'featureA'],
-  defaultNS: 'common',
-  fallbackNS: 'common',
-  keySeparator: '.',
-  nsSeparator: ':'
-});
-```
-
-### 2. Organizing Resources
-- Use **namespaces** (e.g., `common.json`, `validation.json`).
-- Lazy-load per feature or page to reduce bundle size.
-
-### 3. Interpolation & Escaping
-- Default: `escapeValue: true` to prevent XSS.
-- Only disable (`{{- var}}` or `escapeValue:false`) for trusted HTML.
-
-### 4. Missing Translations
-- Enable `saveMissing: true` in dev to collect keys.
-- Use `cimode` or custom handlers to spot missing strings.
-- Set `returnEmptyString: false` to treat `""` as missing.
-
-### 5. Advanced Features
-- **Nesting:** `"welcome": "Welcome to $t(terms.appName)!"`
-- **Context + Plural:** Combine `context` and `count` for gendered plurals.
-- **Backends & Caching:** Chain backends and cache translations for performance.
+### 8. Encoding
+- Always serve content in UTF‑8.
 
 ---
 
-## Example AI Prompts for Code Review
+## Code Review
 
-- **Hard-coded Strings:**  
-  > "Scan my project for any hard-coded UI strings not passed through i18next."
+Only fix i18n-related code, do not change anything else.
 
-- **Configuration Review:**  
-  > "Analyze this i18next.init config. Are `fallbackLng`, `supportedLngs`, and `escapeValue` set correctly?"
+### 1. Hard‑coded Strings
+- Scan the project for any hard‑coded UI strings not passed through your i18n function.
 
-- **Pluralization Check:**  
-  > "Review pluralization usage. Are there manual count checks instead of `_one`/`_other` keys?"
+### 2. Pluralization Check
+- Identify manual plural logic and suggest replacing with library plural forms (`_one`, `_other`).
 
-- **Concatenation Issues:**  
-  > "Find instances of string concatenation for UI text and suggest using translation placeholders."
+### 3. Formatting Audit
+- Review number, date, and currency formatting. Are locale‑aware formats used?
 
-- **XSS Safety:**  
-  > "Verify no unescaped interpolation (`escapeValue:false`) with user input to prevent XSS."
+### 4. RTL Verification
+- Detect pages displaying in LTR when the language attribute is set to an RTL language. Ensure CSS `direction: rtl` is applied.
+
+### 5. Placeholder Consistency Check
+- Verify that placeholder names in translation strings match those used in code, and flag any mismatches.
+
+### 6. Missing Translation Keys
+- Scan for missing translation keys in resource files and suggest adding them to the appropriate locale files.
 
 ---
 
-*This page is auto-generated and maintained for AI-powered i18n code reviews.*
+*This guide is open source and free for personal, educational, and commercial use under the MIT License. [View and contribute on GitHub](https://github.com/locagent/i18n-best-practices/blob/main/index.md).*
