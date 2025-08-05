@@ -66,7 +66,3 @@ Only fix i18n-related code, do not change anything else.
 
 ### 6. Missing Translation Keys
 - Scan for missing translation keys in resource files and suggest adding them to the appropriate locale files.
-
----
-
-*This guide is open source and free for personal, educational, and commercial use under the MIT License. [View and contribute on GitHub](https://github.com/locagent/i18n-best-practices/blob/main/index.md).*
