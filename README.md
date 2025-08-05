@@ -47,7 +47,4 @@ This project is licensed under the **MIT License**. See [LICENSE](LICENSE) for d
 
 ## Contact
 
-Maintained by **LocAgent**.  
-GitHub: [locagent/i18n-best-practices](https://github.com/locagent/i18n-best-practices)  
-Website: [https://locagent.dev](https://locagent.dev)
-Email: hi@locagent.dev
+Maintained by [LocAgent.dev](https://locagent.dev). Contact us at hi@locagent.dev
