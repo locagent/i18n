@@ -20,7 +20,7 @@ Comprehensive guide and best practices for internationalization (i18n), designed
 In your AI app builder, copy and paste the following prompt to apply our i18n guidelines:
 
 ```
-Follow the best practices from i18n.locagent.dev and review the code in the i18n scope using the project's i18n framework. If the project hasn't integrated any i18n framework yet, integrate with i18next using the guide.
+Follow the guidelines from i18n.locagent.dev
 ```
 
 This will instruct the AI to focus on i18n issues such as missing keys, placeholder consistency, and RTL support, without altering unrelated logic or formatting.
