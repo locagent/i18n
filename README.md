@@ -1,4 +1,4 @@
-<img width="300" alt="locagent.dev" src="https://github.com/user-attachments/assets/c65b51c1-e633-43b6-bd51-c52b40c58778" />
+<img width="100%" alt="locagent.dev" src="https://github.com/user-attachments/assets/a0e750db-c4c4-4679-951c-773a0b3bc89c" />
 
 [![License](https://img.shields.io/github/license/locagent/i18n-best-practices)](https://github.com/locagent/i18n-best-practices/blob/main/LICENSE)
 [![Contributors](https://img.shields.io/github/contributors/locagent/i18n-best-practices)](https://github.com/locagent/i18n-best-practices/graphs/contributors)
@@ -17,7 +17,7 @@ Comprehensive guide and best practices for internationalization (i18n), designed
 ---
 
 ## Usage
-In your AI app builder, type the following prompt to have it apply our i18n best practices and review code:
+In your AI app builder, copy and paste the following prompt to apply our i18n guidelines:
 
 ```
 Follow the best practices from i18n.locagent.dev and review the code in the i18n scope using the project's i18n framework. If the project hasn't integrated any i18n framework yet, integrate with i18next using the guide.
@@ -47,4 +47,6 @@ This project is licensed under the **MIT License**. See [LICENSE](LICENSE) for d
 
 ## Contact
 
-Maintained by [LocAgent.dev](https://locagent.dev). Contact us at hi@locagent.dev
+Maintained by [LocAgent.dev](https://locagent.dev).
+
+Contact us at Hi@LocAgent.dev
