@@ -26,8 +26,8 @@ description: "Best practices for building multilingual web applications."
 ### 3. Sitemap
 - Maintain a sitemap with the domain and routing to support separate language URLs, such as `/{language}/{page}`. For example: `/en/about`, `/es/about`, `/ar/about`, `/fr/about`
 
-### 4. Translate Function
-- Ensure translations are ready and loaded properly before rendering.
+### 4. Pre-rendering Translation Check
+- Translations must be loaded and ready before the first rendering.
 
 ### 5. Language Selector
 - A dropdown language selector with: Display languages in their native names, avoid using flags as language indicators, disable the currently active language, update URL and user preferences on change and navigate other pages.
