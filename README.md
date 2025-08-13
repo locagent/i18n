@@ -9,13 +9,6 @@ Comprehensive guide and best practices for internationalization (i18n), designed
 
 ---
 
-## Features
-
-- **General i18n Best Practices:** String handling, pluralization, formatting, fallbacks, RTL support.  
-- **AI Code Review Prompts:** Ready-to-use prompts to drive AI-powered linting of localization scope.  
-
----
-
 ## Usage
 In your AI app builder, copy and paste the following prompt to apply our i18n guidelines:
 
