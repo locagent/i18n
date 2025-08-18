@@ -4,9 +4,9 @@ title: "Building Global Apps - An Internationalization (i18n) Guide"
 description: "Best practices for building internationalization (i18n) web apps by Lovable, Bubble, Bolt, Replit, v0, Floot, Cursor, Windsurf, Claude Code AI app builders."
 ---
 
-# 🌐 Building Global AI Apps: An Internationalization (i18n) Guide
+# Building Global AI Apps: An Internationalization (i18n) Guide
 
-## 📋 Table of Contents
+## Table of Contents
 
 1. [Infrastructure](#infrastructure)
 2. [Best Practices](#best-practices)
