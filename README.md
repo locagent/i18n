@@ -1,4 +1,4 @@
-<img width="100%" alt="locagent.dev" src="https://github.com/user-attachments/assets/679e0e1d-ce8c-4a0d-b249-e26ec0f7c85e" />
+<img width="100%" alt="locagent.dev" src="https://github.com/locagent/locagent.dev/blob/main/assets/logo-banner.png" />
 
 [![License](https://img.shields.io/github/license/locagent/i18n-best-practices)](https://github.com/locagent/i18n-best-practices/blob/main/LICENSE)
 [![Contributors](https://img.shields.io/github/contributors/locagent/i18n-best-practices)](https://github.com/locagent/i18n-best-practices/graphs/contributors)
