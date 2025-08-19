@@ -63,9 +63,6 @@ description: "Best practices for building internationalization (i18n) web apps b
 ### 8. Encoding
 - Always serve content in UTF‑8.
 
-### 9. Language Selector
-- Don’t include a flag in the language selector, because a flag represent a region but not a language
-
 ---
 
 ## Code Review
