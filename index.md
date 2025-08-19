@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Building Global Apps - An Internationalization (i18n) Guide"
-description: "Best practices for building internationalization (i18n) web apps by Lovable, Bubble, Bolt, Replit, v0, Floot, Cursor, Windsurf, Claude Code AI app builders."
+description: "Internationalization (i18n) best practices for vibe coding MVPs built with Lovable, Bubble, Bolt, Replit, v0, Floot, Cursor, Windsurf, Claude Code AI app builders."
 ---
 
 # Building Global AI Apps: An Internationalization (i18n) Guide
